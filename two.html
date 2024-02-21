@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;"  >
+    <div class="parent">
+        <div class="days">Monday</div>
+        <div class="days">Tuesday</div>
+        <div class="days">Wednesday</div>
+        <div class="days">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children); // it gives a node list of all elements in it
+    // console.log(parent.children[1].innerHTML); 
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    // //     console.log(parent.children[i].innerHTML);
+
+    // }
+  parent.children[1].style.color = "orange"
+//   console.log(parent.firstElementChild); // it returns first element of the nodeList
+//   console.log(parent.lastElementCHild); // it returns last element of the nodeList
+
+const dayOne = document.querySelector('.days')
+// console.log(dayOne);  
+// console.log(dayOne.parentElement); // it returns the parent element of the list
+// console.log(dayOne.nextElementSibling); // it returns the sibling/next element
+
+console.log("NODES: ", parent.childNodes); // it returns the childNode that includes spaces( )/next line also as childnode
+
+</script>
+</html>
