@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>javascript</li>
+    </ul> 
+</body>
+
+<script>
+    // creating a new element
+    function addlang(langName){
+       const li =  document.createElement('li') // it creates a new element
+       li.innerHTML = `${langName}` //it changes the inner element but it traverse whole document tree which is not an optimised method
+       document.querySelector('.language').appendChild(li) //the created element is attached to the class=language
+
+    }
+
+    addlang("python")
+    addlang("ruby")
+
+    function addOptimizeLang(langName){
+        const li = document.createElement('li')  
+        li.appendChild(document.createTextNode(langName)) //created a textNode and attached to the created element
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOptimizeLang("c++")
+    // editing an element
+
+    const secondLang = document.querySelector('li:nth-child(2)')
+    // secondLang.innerHTML = "golang" 
+    const newLi = document.createElement('li')
+    newLi.textContent = "mojo"
+    secondLang.replaceWith(newLi)
+
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>Typescript</li>'
+
+    // remove element
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+
+</script>
+
+</html>
