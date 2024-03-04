@@ -15,15 +15,20 @@
     const sayDate = function(str){
         console.log(str, Date.now());
     }
+
+    
+
     let intervalId;
-    document.querySelector('#start').addEventListener('click', function(e){
-        intervalId = setInterval(sayDate, 1000, "hi")
+        
+     document.querySelector('#start').addEventListener('click', function(e){
+     intervalid=setInterval(sayDate, 1000, "hi")
+     
         console.log("STARTED");
     })
     
      document.querySelector('#stop').addEventListener('click', function(e){
-        
-        clearInterval(intervalId);
+       
+      clearInterval(intervalid);
 
         console.log("STOPPED");
     })
